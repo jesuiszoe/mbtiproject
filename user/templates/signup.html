@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+    <h3>
+        회원가입
+    </h3>
+    <div class="container">
+        <form action="{% url 'signup' %}" method="POST">
+            {% csrf_token %}
+            <div class="logincontainer">
+                <input id="loginbox" class="loginbox" type="text" name='username' placeholder="아이디">
+            </div>
+            
+            <div class="logincontainer">
+                <input id="loginbox" class="loginbox" type="text" name='email_address' placeholder="이메일">
+            </div>
+            <div class="logincontainer">
+                <input id="loginbox" class="loginbox" type="text" name='password1' placeholder="비밀번호">
+            </div>
+            <div class="logincontainer">
+                <input id="loginbox" class="loginbox" type="text" name='password2' placeholder="비밀번호 재확인">
+            </div>
+
+            <div class="mbticontainer">
+                <select id="mbti" class="mbti" type="text" name="mbti" placeholder="mbti 선택">
+                    <option selected value="1">ISTJ</option>
+                    <option value="2">ISFJ</option>
+                    <option value="3">INFJ</option>
+                    <option value="4">INTJ</option>
+                    <option value="5">ISTP</option>
+                    <option value="6">ISFP</option>
+                    <option value="7">INFP</option>
+                    <option value="8">INTP</option>
+                    <option value="9">ESTP</option>
+                    <option value="10">ESFP</option>
+                    <option value="11">ENFP</option>
+                    <option value="12">ENTP</option>
+                    <option value="13">ESTJ</option>
+                    <option value="14">ESFJ</option>
+                    <option value="15">ENFJ</option>
+                    <option value="16">ENTJ</option>
+                </select>
+            </div>
+            <div class="submitbtn">
+                <button type="submit" value="가입하기"  class="button">회원가입</button>
+            </div>
+        </form>
+    </div>
+    
+
+
+
+</body>
