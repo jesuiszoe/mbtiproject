@@ -69,7 +69,8 @@
 		</style>
 	</head>
 	<body>
-		<form action="board/" method="get" >
+		<form action="http://115.85.181.207:8000/mbti/board/" method="POST" >
+			{% csrf_token %}
 			<div><span class="title">제목</span><input type="text" class = "title_text" name = "title" placeholder = "제목을 입력해주세요"></div>
 			
 			<span class="title">MBTI 선택</span>
