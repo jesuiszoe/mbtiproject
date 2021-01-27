@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body background="../images/login.jpg">
+    
+    <h3>
+        로그인
+    </h3>
+
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        <div class="logincontainer">
+            <input id="loginbox" class="loginbox" style="color:#ffffff;"type="text" name='username' placeholder="아이디">
+        </div>
+        <div class="logincontainer">
+            <input id="loginbox" class="loginbox" style="color:#ffffff; "type="text" name='password' placeholder="비밀번호">
+        </div>
+    </form>
+    <div class="submitbtn">
+        <input type="submit" value="로그인"  class="button">
+    </div>
+    
+</body>
