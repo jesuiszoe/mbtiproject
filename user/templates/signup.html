@@ -16,15 +16,11 @@
             <div class="logincontainer">
                 <input id="loginbox" class="loginbox" type="text" name='username' placeholder="아이디">
             </div>
-            
             <div class="logincontainer">
-                <input id="loginbox" class="loginbox" type="text" name='email_address' placeholder="이메일">
+                <input id="loginbox" class="loginbox" type="password" name='password1' placeholder="비밀번호">
             </div>
             <div class="logincontainer">
-                <input id="loginbox" class="loginbox" type="text" name='password1' placeholder="비밀번호">
-            </div>
-            <div class="logincontainer">
-                <input id="loginbox" class="loginbox" type="text" name='password2' placeholder="비밀번호 재확인">
+                <input id="loginbox" class="loginbox" type="password" name='password2' placeholder="비밀번호 재확인">
             </div>
 
             <div class="mbticontainer">
@@ -50,6 +46,7 @@
             <div class="submitbtn">
                 <button type="submit" value="가입하기"  class="button">회원가입</button>
             </div>
+            <br><span style="color:red;"><strong>{{ error }}</strong> </span>
         </form>
     </div>
     
