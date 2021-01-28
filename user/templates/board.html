@@ -101,10 +101,8 @@
             </select>
 			<button type="submit" class="create" name="create">모임 만들기</button>
         </form>
-        {{title}}
-        <br>
-        {{mbti}}<br>
-        {{body_text}}<br>
+		
+		
 
 		</script>
 
@@ -112,13 +110,23 @@
 			<span class ="layoutt" id = "container1" width = 250px height = 410px>
 				<img src="aa.png"/>
 				<br>
-				<span class= "title"  style ="text-align:center" > {{title}} </span>
+				<span class= "title"  style ="text-align:center" > 제목:예시1 </span>
 				<br>
-				{{mbti}}
+				mbti:예시1
 				<br>
 				<button type="button" class="join" style ="text-align:center"> 함께 하기 </button>
 			</span>
-		</div>
+
+			<span class ="layoutt" id = "container1" width = 250px height = 410px>
+				<img src="aa.png"/>
+				<br>
+				<span class= "title"  style ="text-align:center" >{{title}} </span>
+				<br>
+				{{mbti}}
+				<br>
+				<button type="button" class="join" style ="text-align:center"> {{body_text}} </button>
+			</span>
+		
 		
         
 		

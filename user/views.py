@@ -43,5 +43,20 @@ def logout(request):
     auth.logout(request)
     return redirect('home')
 
-def detail(request):
-    
+def board(req):
+    if req.method == "POST":
+        title = req.POST['title']
+        mbti = req.POST['mbti']
+        body_text = req.POST['body_text']
+
+        data = {'title':title, 'mbti':mbti, 'body_text':body_text}
+        return render(req,"board.html",data)
+
+
+    return render(req,'board.html')
+
+
+
+
+def register(req):
+    return render(req,'register.html')
