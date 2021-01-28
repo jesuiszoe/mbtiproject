@@ -3,7 +3,8 @@ from django.http.response import HttpResponse
 from .models import User
 from django.contrib import auth
 from django.contrib.auth.models import User
-
+from django.utils import timezone
+from .models import *
 
 
 def home(request):
@@ -43,6 +44,25 @@ def logout(request):
     auth.logout(request)
     return redirect('home')
 
+def detail(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'detail.html', {"result" : post})
+
+def show_post(request):
+    contents = Post.objects.all()
+    return render(request, 'post.html', {'post_list' : contents})
+
+def create(request):
+    post = Post()
+    post.title = request.GET['title']
+    post.body = request.GET['body']
+    post.pub_date = timezone.datetime.now()
+    post.mbti = request.GET['mbti']
+    post.save()
+    return redirect('/detail/'+str(post.id))
+
+def new (request):
+    return render(request, 'new.html')
 def board(req):
     if req.method == "POST":
         title = req.POST['title']
