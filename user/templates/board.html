@@ -81,7 +81,7 @@
 	
     <body>
         <form action='http://115.85.181.207:8000/mbti/register/'>
-		<div style="width: 15%; height:1000px; float: left; margin-top: 200px;">
+			<div style="width: 15%; height:2000px; float: left; margin-top: 200px;">
 		</div>
             <select class="mbti_select">
                 <option value="I">I</option>
@@ -102,23 +102,25 @@
 			<button type="submit" class="create" name="create">모임 만들기</button>
         </form>
 		
-		
+		<div>
+		<script type="text/javascript">
+			for(var i=0;i<10;i++){
+				document.write( container1 + i
+				);
+			}
 
-		</script>
 
-a
-			<span class ="layoutt" id = "container1" width = 250px height = 410px>
+
+			<span class ="layoutt" id = "container1" width = "250px" height = "410px">
 				<img src="aa.png"/>
 				<br>
-				<span class= "title"  style ="text-align:center" > 제목:예시1 </span>
+				<span class= "title"  style ="text-align:center" > {{title}} </span>
 				<br>
-				mbti:예시1
+				{{mbti}}
 				<br>
 				<button type="button" class="join" style ="text-align:center"> 함께 하기 </button>
 			</span>
-
-		
-		
+		</div>
 		
         
 		
