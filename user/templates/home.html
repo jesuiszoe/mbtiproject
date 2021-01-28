@@ -1,3 +1,7 @@
+
+{% load static %}  
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +15,36 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
     <style>
-       
+        .navbar{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 100vw;
+				height: 65px;
+				background: #141414 0% 0% no-repeat padding-box;
+				opacity: 1;
+				background-color: black;
+			}
+			.btn-default{
+				background-color: transparent !important;
+				background-image: none !important;
+				border-color: transparent;
+				border: none;
+				color: white; 
+			
+			}
+			.collapse{
+				top: 22px;
+				left: 1845px;
+				width: 40px;
+				height: 19px;
+				text-align: center;
+				font: normal normal normal 15px/19px Apple SD Gothic Neo;
+				letter-spacing: 0px;
+				opacity: 1;
+			
+            }
+			
 
         .submitbtn{
             margin-top: 200px;
@@ -102,15 +135,44 @@
 </head> 
 
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          
+          <!--이미지삽입-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="col-xs-6" style="background-color:black-space; color: #ffffff; display:inline-block;">
+                    <button type="button" style ="align-iteams: center; margin:auto;" class="btn btn-default btn-lg" onclick="location.href="">
+                     Playground
+                    </button>
+          </div>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'logout'%}" style="color: white">logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}" style="color: white">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}" style="color: white">Signup</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
     
     <div class="submitbtn">
-        <form action="http://115.85.181.207:8000/mbti/board/">
-        <button type="submit" value="가입하기"  class="button">새로운 모임을 시작해보세요</button>
-        </form>
+        <button type="button" value="가입하기"  class="button" href="{% url 'detail' %}">새로운 모임을 시작해보세요</button>
     </div>
 
     <div class="image">
-        <img src="../images/img.jpg">
+        <img src="{% static 'img.jpg' %}">
     </div>
 
     <p>What is your mbti?</p>
