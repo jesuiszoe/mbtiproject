@@ -25,7 +25,7 @@ def signup(request):
         # User wants to enter info
         return render(request, 'user/signup.html')
     if not ( userid and username and password and gender):
-   data['error'] = '모든 값을 입력해주세요.'
+        data['error'] = '모든 값을 입력해주세요.'
 def register(req):
     return render(req,"register.html")
 
