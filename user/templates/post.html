@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block content%}
+<h3>자유게시판</h3>
+{% for row in post_list %}
+<div>
+    <a href="{% url 'detail' row.id %}">제목 : {{row.title}}</a>
+내용 : {{row.body}}<br>
+작성시간 : {{row.pub_date}}<br>
+mbti : {{row.mbti}}<Br>
+</div>
+<br>
+{% endfor %}
+
+{%endblock%}
