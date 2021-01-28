@@ -36,21 +36,16 @@ def signup(request):
 	
 def login(request):
     if request.method == "POST" :
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        data = {}
-        if not ( username and password ):
-            data['error'] = '모든 값을 입력해주세요.'
-            return render(request, 'login.html', data)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(request, username=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('home')
         else:
-            user = User.objects.get(username=username)
-            if user.password == password:
-                return redirect('home')
-            else:
-                data['error'] = '아이디 또는 비밀번호가 틀립니다.'
-                return render(request, 'login.html', data)
+            return render(request, 'login.html', {'error': 'username or password is incorrect'})
     else:
-        return render(request, 'login.html')
+        return render(request,'login.html')
 
 def logout(request):
     auth.logout(request)
