@@ -55,7 +55,7 @@ def detail(request, id):
     post = Post.objects.get(id=id)
     return render(request, 'detail.html', {"result" : post})
 
-def show_post(request):
+def post(request):
     contents = Post.objects.all()
     return render(request, 'post.html', {'post_list' : contents})
 
@@ -70,22 +70,16 @@ def create(request):
 
 def new (request):
     return render(request, 'new.html')
-def board(req):
-    if req.method == "POST":
-        title = req.POST['title']
-        mbti = req.POST['mbti']
-        body_text = req.POST['body_text']
 
-        data = {'title':title, 'mbti':mbti, 'body_text':body_text}
-        return render(req,"board.html",data)
+def enfp(request):
+    return render(request, 'enfp.html')
+
+def isfj(request):
+    return render(request, 'isfj.html')
 
 
-    return render(req,'board.html')
-
-def register(req):
-    return render(req,'register.html')
-
-
+def infp(request):
+    return render(request, 'infp.html')
 
 def whoami(req):
     if req.method == "GET":
@@ -98,6 +92,3 @@ def whoami(req):
             return render(req,'Enfp.html')
         elif mymbti == '13':
             return render(req,'estj.html')
-    
-    
-    

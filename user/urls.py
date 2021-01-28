@@ -15,8 +15,9 @@ urlpatterns = [
         
         
         path('detail/<int:id>', views.detail, name='detail'),
-        path('post/', views.show_post, name='post'),
+        path('post/', views.post, name='post'),
         path('new/', views.new, name = 'new'),
         path('new/create', views.create, name='create'),
-
+        path('enfp/', views.enfp, name='enfp'),
+        path('isfj', views.isfj, name='isfj'),
         ]

@@ -55,6 +55,11 @@
             margin-bottom: 50px;
             text-align: center;
         }
+        .submitbtn2{
+            margin-top: 30px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
         
         .button {
             border: 2px solid #141414;
@@ -176,7 +181,6 @@
     color: #141414;
     opacity: 1;
   }
-    
 
     </style>
 </head> 
@@ -241,8 +245,8 @@
     </nav>
     {% endif %}
     
-    <div class="submitbtn_1">
-        <button type="button" value="가입하기"  class="button" href="{% url 'detail' %}">새로운 모임을 시작해보세요</button>
+    <div class="submitbtn">
+        <button type="button" value="가입하기"  class="button" href="{% url 'post' %}">새로운 모임을 시작해보세요</button>
     </div>
 
     <div class="image">
@@ -274,6 +278,36 @@
     
 
         <div class="submitbtn">
+            <button type="submit"  class="button" name="whoami">나는 어떤사람일까?</button>
+        </div>
+    </form>
+
+
+
+    <form method = "GET" action="whoami/">
+        <div class="mbticontainer">
+            <select id="mbti" class="mbti" type="text" name="mbti" placeholder="mbti 선택">
+                <option selected value="1">ISTJ</option>
+                <option value="2">ISFJ</option>
+                <option value="3">INFJ</option>
+                <option value="4">INTJ</option>
+                <option value="5">ISTP</option>
+                <option value="6">ISFP</option>
+                <option value="7">INFP</option>
+                <option value="8">INTP</option>
+                <option value="9">ESTP</option>
+                <option value="10">ESFP</option>
+                <option value="11">ENFP</option>
+                <option value="12">ENTP</option>
+                <option value="13">ESTJ</option>
+                <option value="14">ESFJ</option>
+                <option value="15">ENFJ</option>
+                <option value="16">ENTJ</option>
+            </select>
+        </div>
+    
+
+        <div class="submitbtn2">
             <button type="submit"  class="button" name="whoami">나는 어떤사람일까?</button>
         </div>
     </form>
