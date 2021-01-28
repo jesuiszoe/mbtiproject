@@ -28,5 +28,6 @@ urlpatterns = [
     path('post/', user.views.show_post, name='post'),
     path('new/', user.views.new, name = 'new'),
     path('new/create', user.views.create, name='create'),
+    path('home/whoami/',user.views.whoami)
    
 ]

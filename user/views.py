@@ -96,7 +96,7 @@ def whoami(req):
     if req.method == "GET":
         mymbti = req.GET['mbti']
         if mymbti == '2':
-            return render(req,"isfj.html")
+            return render(req,'isfj.html')
     
     
     
