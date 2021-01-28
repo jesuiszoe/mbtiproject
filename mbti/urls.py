@@ -31,6 +31,7 @@ urlpatterns = [
     path('enfp/', user.views.enfp, name='enfp'),
     path('isfj/', user.views.isfj, name='isfj'),
     path('infp/', user.views.infp, name='infp'),
+    path('home/whoami/', user.views.whoami, name='whoami'),
 
    
 ]

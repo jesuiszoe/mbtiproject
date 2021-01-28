@@ -80,3 +80,15 @@ def isfj(request):
 
 def infp(request):
     return render(request, 'infp.html')
+
+def whoami(req):
+    if req.method == "GET":
+        mymbti = req.GET['mbti']
+        if mymbti == '2':
+            return render(req,'isfj.html')
+        elif mymbti == '7':
+            return render(req,'infp.html')
+        elif mymbti == '11':
+            return render(req,'Enfp.html')
+        elif mymbti == '13':
+            return render(req,'estj.html')
