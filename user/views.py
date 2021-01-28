@@ -8,24 +8,25 @@ from .models import *
 
 
 def home(request):
-    return render(request,"home.html")
+    return render(request,'home.html')
 
 def signup(request):
     if request.method == "POST":
         if request.POST['password1'] == request.POST['password2']:
             user = User.objects.create_user(
-                username=request.POST['username'], password=request.POST['password1']
-            )
-
+                username=request.POST['username'], 
+                password=request.POST['password1'],
+                )
         signup = Signup()
-        signup.name = request.POST['name']
         signup.user = user
+        
         signup.save()
         auth.login(request, user)
         return redirect('home')
     return render(request, 'signup.html')
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 def first(req):
     return render(req,"first.html")
@@ -47,19 +48,28 @@ def board(req):
 
 =======
 >>>>>>> 714d23ff03f8df774746ab8786b99e4bd22d3454
+=======
+
+
+
+>>>>>>> b9d544ee3b3f75be05615d893bd2847cd2e09843
 # Create your views here.
 
+
+
+	
 def login(request):
-    if request.method == 'POST':
+    if request.method == "POST" :
         username = request.POST['username']
         password = request.POST['password']
         user = auth.authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
             return redirect('home')
-        return render(request, 'login.html', {'error': 'username or password is incorrect.'})
-    return render(request, 'login.html')
-
+        else:
+            return render(request, 'login.html', {'error': 'username or password is incorrect'})
+    else:
+        return render(request,'login.html')
 
 def logout(request):
     auth.logout(request)
@@ -80,7 +90,7 @@ def create(request):
     post.pub_date = timezone.datetime.now()
     post.mbti = request.GET['mbti']
     post.save()
-    return redirect('/detail/'+str(post.id))
+    return redirect('post')
 
 def new (request):
     return render(request, 'new.html')

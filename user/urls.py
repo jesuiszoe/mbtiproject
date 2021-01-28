@@ -5,6 +5,7 @@ from .models import Post
 
 urlpatterns = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         path('', views.register),
         path('board/', views.board),
         path('register/',views.register)
@@ -12,6 +13,9 @@ urlpatterns = [
 
 =======
         path('', views.home, name='home'),
+=======
+        path('home', views.home, name='home'),
+>>>>>>> b9d544ee3b3f75be05615d893bd2847cd2e09843
         path('signup/', views.signup, name='signup'),
         path('login/', views.login, name='login'),
         path('logout/', views.logout, name='logout'),
