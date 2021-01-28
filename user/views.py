@@ -8,7 +8,7 @@ from .models import *
 
 
 def home(request):
-    return render(request,"home.html")
+    return render(request,'home.html')
 
 def signup(request):
     if request.method == "POST":
@@ -31,16 +31,26 @@ def signup(request):
 
 # Create your views here.
 
+
+
+	
 def login(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = auth.authenticate(request, username=username, password=password)
-        if user is not None:
-            auth.login(request, user)
-            return redirect('home')
-        return render(request, 'login.html', {'error': 'username or password is incorrect.'})
-    return render(request, 'login.html')
+    if request.method == "POST" :
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        data = {}
+        if not ( username and password ):
+            data['error'] = '모든 값을 입력해주세요.'
+            return render(request, 'login.html', data)
+        else:
+            user = User.objects.get(username=username)
+            if user.password == password:
+                return redirect('home')
+            else:
+                data['error'] = '아이디 또는 비밀번호가 틀립니다.'
+                return render(request, 'login.html', data)
+    else:
+        return render(request, 'login.html')
 
 def logout(request):
     auth.logout(request)
