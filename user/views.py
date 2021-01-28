@@ -55,8 +55,17 @@ def board(req):
 
     return render(req,'board.html')
 
-
-
-
 def register(req):
     return render(req,'register.html')
+
+def detail(req):
+    return render(req,"third.html")
+
+def whoami(req):
+    if req.method == "GET":
+        mymbti = req.GET['mbti']
+        if mymbti == '2':
+            return render(req,"isfj.html")
+    
+    
+    
