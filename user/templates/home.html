@@ -1,6 +1,4 @@
-
 {% load static %}  
-
 
 <!DOCTYPE html>
 <html>
@@ -145,9 +143,7 @@
 
 
           <div class="col-xs-6" style="background-color:black-space; color: #ffffff; display:inline-block;">
-                    <button type="button" style ="align-iteams: center; margin:auto;" class="btn btn-default btn-lg" onclick="location.href="">
-                     Playground
-                    </button>
+            <button type="button" style ="align-iteams: center; margin:auto;" class="btn btn-default btn-lg" href="{% url 'post' %}}">Playground</button>
           </div>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -168,7 +164,7 @@
     
     
     <div class="submitbtn">
-        <button type="button" value="가입하기"  class="button" href="{% url 'detail' %}">새로운 모임을 시작해보세요</button>
+        <button type="button" value="가입하기"  class="button" href="{% url 'post' %}">새로운 모임을 시작해보세요</button>
     </div>
 
     <div class="image">
@@ -186,9 +182,4 @@
     <div class="link">
         <a href="https://www.16personalities.com/ko/무료-성격-유형-검사">mbti를 모른다면 여기로</a>
     </div>
-
-
-    
-
-    
 </body>
