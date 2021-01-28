@@ -1,5 +1,8 @@
 <html>
     <head>
+		
+		
+
 		<style>
 			.mbti_select{
 				top: 142px;
@@ -29,11 +32,56 @@
 				color : white;
 				margin-top : 50px;
 			}
+			img{
+				margin-top: 66px;
+				margin-right: 50px;
+				top: 254px;
+				left: 233px;
+				width: 250px;
+				height: 250px;
+				background: transparent url('img/사각형 2.png') 0% 0% no-repeat padding-box;
+				border: 1px solid #707070;
+				border-radius: 22px;
+				opacity: 1;
+			
+			}
+			.title{
+				top: 529px;
+				left: 248px;
+				width: 220px;
+				height: 31px;
+				text-align: center;
+				font: normal normal 800 25px/31px Apple SD Gothic Neo;
+				letter-spacing: 0px;
+				color: #141414;
+				opacity: 1;
+							
+			}
+			.join{
+				margin-right: 100px;
+				top: 629px;
+				left: 303px;
+				width: 111px;
+				height: 36px;
+				background: #141414 0% 0% no-repeat padding-box;
+				border: 1px solid #707070;
+				border-radius: 35px;
+				opacity: 1;
+				color:white;
+							
+			
+			}
+			.layoutt{
+				margin-right : 50px;
+			}
 			
 		</style>
 
     </head>
+	
     <body>
+		<div style="width: 15%; height:1000px; float: left; margin-top: 200px;">
+		</div>
         <form action='.'>
             <select class="mbti_select">
                 <option value="I">I</option>
@@ -52,13 +100,31 @@
                 <option value="P">P</option>
             </select>
 			<button type="submit" class="create" name="create">모임 만들기</button>
-
         </form>
-        {{title}}
-        <br>
-        {{mbti}}<br>
-        {{body_text}}<br>
+		
+		<div>
+		<script type="text/javascript">
+			for(var i=0;i<10;i++){
+				document.write( container1 + i
+				);
+			}
 
+		</script>
+
+
+			<span class ="layoutt" id = "container1" width = 250px height = 410px>
+				<img src="aa.png"/>
+				<br>
+				<span class= "title"  style ="text-align:center" > {{title}} </span>
+				<br>
+				{{mbti}}
+				<br>
+				<button type="button" class="join" style ="text-align:center"> 함께 하기 </button>
+			</span>
+		</div>
+		
+        
+		
     </body>
 
 </html>
