@@ -55,7 +55,7 @@ def detail(request, id):
     post = Post.objects.get(id=id)
     return render(request, 'detail.html', {"result" : post})
 
-def show_post(request):
+def post(request):
     contents = Post.objects.all()
     return render(request, 'post.html', {'post_list' : contents})
 
@@ -70,3 +70,13 @@ def create(request):
 
 def new (request):
     return render(request, 'new.html')
+
+def enfp(request):
+    return render(request, 'enfp.html')
+
+def isfj(request):
+    return render(request, 'isfj.html')
+
+
+def infp(request):
+    return render(request, 'infp.html')

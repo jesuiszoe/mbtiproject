@@ -1,0 +1,114 @@
+{%extends 'base.html'%}
+{% load static %} 
+
+{%block content%}
+<html>
+    <head>
+      
+       <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+      <style>
+
+            img{
+    
+            float : right;
+
+            width: 400px;
+            height: 400px;
+
+            background: transparent 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            border-radius: 28px;
+            opacity: 1;
+
+         
+         
+         }
+         
+         .name{
+         
+            
+            height: 31px;
+
+            text-align: center;
+            font: normal normal 800 25px/31px Apple SD Gothic Neo;
+            letter-spacing: 0px;
+            color: #141414;
+            opacity: 1;
+         }
+         
+         .intro{
+         
+
+            margin-top:25px;
+         
+            height: 19px;
+            text-align: left;
+            font: normal normal bold 15px/19px Apple SD Gothic Neo;
+            letter-spacing: 0px;
+            color: #141414;
+            opacity: 1;
+            
+         }
+          
+         .content{
+            text-align: left;
+            margin-top: 27px;
+            font: normal normal normal 15px/19px Apple SD Gothic Neo;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+            
+            
+            
+            height: 150px;
+            top: 296px;
+         
+         }
+      
+         
+      </style>
+
+    </head>
+   
+    <body>
+   
+         <div class="row">
+            <div class ="col-sm-2"></div>
+         <div class = "col-sm-4" style="width: 20%; height:600px; float: left; margin-top: 200px;">
+            <img src="{% static 'enfp.png' %}" align= left >
+         </div>
+      
+      <div class = "col-sm-4"style="width: 30%; height:600px; float: left; margin-top: 200px;">
+         <span class = "name"> Enfp </span>
+         <br>
+           <div class= "intro"> 재기발랄한 활동가, 스파크형
+        </div>
+         <br>
+          
+            <div class ="content" style= "width : 300px;">따뜻하고 정열적이고 활기가 넘치며 재능이 많고 상상력이 풍부하다. 온정적이고 창의적이며 항상 새로운 가능성을 찾고 시도하는 유형이다. 문제 해결에 재빠르고 관심이 있는 일은 무엇이든지 수행해내는 능력과 열성이 있다. </div>
+         <br>
+         <div class= "intro"> 잘맞는 유형 </div>
+         <div class ="content" style= "width : 300px;"> Infj, Intj </div>
+    </div>
+      
+      </div>
+         
+
+
+
+         
+      </div>
+      
+        
+      
+    </body>
+
+</html>
+{%endblock%}

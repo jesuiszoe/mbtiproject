@@ -193,7 +193,9 @@
     {% endif %}
     
     <div class="submitbtn">
-        <button type="button" value="가입하기"  class="button" href="{% url 'post' %}">새로운 모임을 시작해보세요</button>
+        <button type="button" value="가입하기"  class="button">
+          <a href="{% url 'post' %}">새로운 모임을 시작해보세요</a>
+        </button>
     </div>
 
     <div class="image">
