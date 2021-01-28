@@ -80,8 +80,7 @@ def board(req):
 def register(req):
     return render(req,'register.html')
 
-def detail(req):
-    return render(req,"third.html")
+
 
 def whoami(req):
     if req.method == "GET":
