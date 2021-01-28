@@ -241,9 +241,12 @@
     </nav>
     {% endif %}
     
+
+    <form action="http://115.85.181.207:8000/post/">
     <div class="submitbtn_1">
-        <button type="button" value="가입하기"  class="button" href="{% url 'detail' %}">새로운 모임을 시작해보세요</button>
+        <input type="submit" value="새로운 모임을 시작해보세요"  class="button" ></button>
     </div>
+    </form>
 
     <div class="image">
         <img src="{% static 'img.jpg' %}">
