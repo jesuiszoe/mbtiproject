@@ -20,7 +20,7 @@ import user.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mbti/', include('user.urls')),
-    path('', user.views.home, name='home'),
+    path('home/', user.views.home, name='home'),
     path('signup/', user.views.signup, name='signup'),
     path('login/', user.views.login, name='login'),
     path('logout/', user.views.logout, name='logout'),

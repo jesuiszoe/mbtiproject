@@ -104,7 +104,7 @@ h3{
         로그인
     </h3>
 
-    <form action="{% url 'signup' %}" method="POST">
+    <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
         <div class="logincontainer">
             <input id="loginbox" class="loginbox" type="text" name='username' placeholder="아이디">
