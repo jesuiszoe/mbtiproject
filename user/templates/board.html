@@ -1,0 +1,64 @@
+<html>
+    <head>
+		<style>
+			.mbti_select{
+				top: 142px;
+				
+				width: 87px;
+				height: 46px;
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				border: 2px solid #141414;
+				border-radius: 23px;
+				opacity: 1;
+				text-align : center;
+				margin:10px;
+				margin-top : 50px;
+			}
+			.mbti_text{
+			text-align:center;
+			}
+			.create{
+				top: 142px;
+				left: 1518px;
+				width: 164px;
+				height: 55px;
+				background: #141414 0% 0% no-repeat padding-box;
+				border-radius: 30px;
+				opacity: 1;
+				margin-left : 700px;
+				color : white;
+				margin-top : 50px;
+			}
+			
+		</style>
+
+    </head>
+    <body>
+        <form action='.'>
+            <select class="mbti_select">
+                <option value="I">I</option>
+                <option value="E">E</option>
+            </select>
+            <select class="mbti_select">
+                <option value="S">S</option>
+                <option value="N">N</option>
+            </select>
+            <select class="mbti_select">
+                <option value="F">F</option>
+                <option value="T">T</option>
+            </select>
+            <select class="mbti_select">
+                <option value="J">J</option>
+                <option value="P">P</option>
+            </select>
+			<button type="submit" class="create" name="create">모임 만들기</button>
+
+        </form>
+        {{title}}
+        <br>
+        {{mbti}}<br>
+        {{body_text}}<br>
+
+    </body>
+
+</html>
