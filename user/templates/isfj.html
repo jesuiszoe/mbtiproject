@@ -1,3 +1,7 @@
+{%extends 'base.html'%}
+{% load static %} 
+
+{%block content%}
 <html>
     <head>
       
@@ -12,7 +16,6 @@
       <style>
 
             img{
-            
     
             float : right;
 
@@ -63,9 +66,8 @@
             opacity: 1;
             
             
-
             
-            height: 300px;
+            height: 150px;
             top: 296px;
          
          }
@@ -80,7 +82,7 @@
          <div class="row">
             <div class ="col-sm-2"></div>
          <div class = "col-sm-4" style="width: 20%; height:600px; float: left; margin-top: 200px;">
-            <img src="isfj.jpg" align= left >
+            <img src="{% static 'isfj.png' %}" align= left >
          </div>
       
       <div class = "col-sm-4"style="width: 30%; height:600px; float: left; margin-top: 200px;">
@@ -108,3 +110,4 @@
     </body>
 
 </html>
+{%endblock%}

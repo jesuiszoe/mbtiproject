@@ -1,7 +1,8 @@
+
+  
 {% load static %}  
 
 <!DOCTYPE html>
-{% load static %}
 <html>
 <head>
     <title>playground</title>
@@ -45,13 +46,13 @@
             }
 			
 
-        .submitbtn_1{
-            margin-top: 150px;
+        .submitbtn{
+            margin-top: 200px;
             margin-bottom: 50px;
             text-align: center;
         }
-        .submitbtn{
-            margin-top: 200px;
+        .submitbtn2{
+            margin-top: 30px;
             margin-bottom: 50px;
             text-align: center;
         }
@@ -134,10 +135,6 @@
             color: #141414;
             opacity: 1;
         }
-        .submitbtn{
-            margin-top: 20px;
-            text-align: center;
-        }
 
         .mbticontainer{
     padding-top: 10px;
@@ -176,7 +173,6 @@
     color: #141414;
     opacity: 1;
   }
-    
 
     </style>
 </head> 
@@ -241,18 +237,26 @@
     </nav>
     {% endif %}
     
-
-    <form action="http://115.85.181.207:8000/post/">
-    <div class="submitbtn_1">
-        <input type="submit" value="새로운 모임을 시작해보세요"  class="button" ></button>
+    <div class="submitbtn">
+        <button type="button" value="가입하기"  class="button">
+          <a href="{% url 'post' %}">새로운 모임을 시작해보세요</a>
+        </button>
     </div>
-    </form>
 
     <div class="image">
         <img src="{% static 'img.jpg' %}">
     </div>
 
     <p>What is your mbti?</p>
+
+    <div class="searchcontainer">
+        <form action="" method="POST">
+            <input id="searchBar" class="searchbar" type="text"  name="" placeholder="mbti를 입력해주세요">
+        </form>
+    </div>
+
+
+
     <form method = "GET" action="whoami/">
         <div class="mbticontainer">
             <select id="mbti" class="mbti" type="text" name="mbti" placeholder="mbti 선택">
@@ -276,7 +280,7 @@
         </div>
     
 
-        <div class="submitbtn">
+        <div class="submitbtn2">
             <button type="submit"  class="button" name="whoami">나는 어떤사람일까?</button>
         </div>
     </form>
@@ -285,3 +289,4 @@
         <a href="https://www.16personalities.com/ko/무료-성격-유형-검사">mbti를 모른다면 여기로</a>
     </div>
 </body>
+

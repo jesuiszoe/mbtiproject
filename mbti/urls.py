@@ -25,9 +25,13 @@ urlpatterns = [
     path('login/', user.views.login, name='login'),
     path('logout/', user.views.logout, name='logout'),
     path('detail/<int:id>', user.views.detail, name='detail'),
-    path('post/', user.views.show_post, name='post'),
+    path('post/', user.views.post, name='post'),
     path('new/', user.views.new, name = 'new'),
     path('new/create', user.views.create, name='create'),
-    path('home/whoami/',user.views.whoami)
+    path('enfp/', user.views.enfp, name='enfp'),
+    path('isfj/', user.views.isfj, name='isfj'),
+    path('infp/', user.views.infp, name='infp'),
+    path('home/whoami/', user.views.whoami, name='whoami'),
+
    
 ]
